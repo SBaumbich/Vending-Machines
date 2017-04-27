@@ -22,6 +22,9 @@ class AddFundsViewController: UIViewController {
     }
     
 
+    @IBAction func dismissAddFundsVC(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     /*
     // MARK: - Navigation
 
