@@ -13,7 +13,7 @@ fileprivate let screenWidth = UIScreen.main.bounds.width
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var scrollingHeader: UILabel!
     @IBOutlet var collectionView: UICollectionView!
@@ -50,9 +50,26 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = layout
     }
     
+    // MARK: UICollectionViewDataSource
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 3
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        // Configure the cell
+        
+        return cell
+    }
 }
-
-
 
 extension CGRect{
     init(_ x:CGFloat,_ y:CGFloat,_ width:CGFloat,_ height:CGFloat) {
