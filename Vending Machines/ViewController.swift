@@ -21,6 +21,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Configure Collection View
+        setupCollectionViewCells()
+        
         //Scroll label
         UIView.animate(withDuration: 8.0, delay:0, options: [.repeat], animations: {
             self.scrollingHeader.frame = CGRect(self.scrollingHeader.frame.origin.x - 650, self.scrollingHeader.frame.origin.y - 0, self.scrollingHeader.frame.size.width, self.scrollingHeader.frame.size.height)
@@ -53,13 +57,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 1
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

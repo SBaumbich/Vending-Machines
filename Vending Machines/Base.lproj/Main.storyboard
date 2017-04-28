@@ -95,6 +95,7 @@
                                                         </label>
                                                     </subviews>
                                                 </view>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <outlet property="icon" destination="8UE-Lh-3FO" id="Mok-P5-x8G"/>
                                                     <outlet property="name" destination="pcp-1G-qYk" id="k7y-3j-dMw"/>

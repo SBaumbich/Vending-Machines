@@ -62,10 +62,10 @@
 			children = (
 				0D36A23A1EB167C500AD5E54 /* AppDelegate.swift */,
 				0D36A23C1EB167C500AD5E54 /* ViewController.swift */,
-				0DECB7F51EB29243001A9334 /* CollectionViewController.swift */,
 				0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */,
 				0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */,
 				0D36A23E1EB167C500AD5E54 /* Main.storyboard */,
+				0DECB7F51EB29243001A9334 /* CollectionViewController.swift */,
 				0D36A2411EB167C500AD5E54 /* Assets.xcassets */,
 				0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */,
 				0D36A2461EB167C500AD5E54 /* Info.plist */,
