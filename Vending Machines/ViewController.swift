@@ -17,10 +17,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet var scrollingHeader: UILabel!
     @IBOutlet var collectionView: UICollectionView!
+    var inventory: [String: VMItem] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let pListDict = PlistConverter.dictionary(fromFile: "VendingInventory", ofType: "plist")
+        let itemInventory = InventoryUnarchiver.vendingInventory(fromDictionary: pListDict)
+        inventory = itemInventory
         
         // Configure Collection View
         setupCollectionViewCells()
@@ -29,8 +33,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         UIView.animate(withDuration: 8.0, delay:0, options: [.repeat], animations: {
             self.scrollingHeader.frame = CGRect(self.scrollingHeader.frame.origin.x - 650, self.scrollingHeader.frame.origin.y - 0, self.scrollingHeader.frame.size.width, self.scrollingHeader.frame.size.height)
         }, completion: nil)
-        
-        
         
     }
 
@@ -41,7 +43,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     func setupCollectionViewCells() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 20, right: 5)
         
         let padding: CGFloat = 10
         let itemWidth = screenWidth/3 - padding
@@ -63,13 +65,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return inventory.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? VendingItemCell else { fatalError()}
         // Configure the cell
+        item =
+        cell.iconView.image = item.icon()
         
         return cell
     }

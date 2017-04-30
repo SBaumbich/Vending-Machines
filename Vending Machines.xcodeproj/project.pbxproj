@@ -13,8 +13,9 @@
 		0D36A2421EB167C500AD5E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D36A2411EB167C500AD5E54 /* Assets.xcassets */; };
 		0D36A2451EB167C500AD5E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */; };
 		0D36A2511EB1989200AD5E54 /* AddFundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */; };
-		0DECB7F61EB29243001A9334 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F51EB29243001A9334 /* CollectionViewController.swift */; };
 		0DECB7F81EB293B1001A9334 /* VendingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */; };
+		0DECB7FA1EB2FF46001A9334 /* Opperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F91EB2FF46001A9334 /* Opperations.swift */; };
+		0DECB7FC1EB30018001A9334 /* VendingInventory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DECB7FB1EB30018001A9334 /* VendingInventory.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		0D36A2441EB167C500AD5E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D36A2461EB167C500AD5E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFundsViewController.swift; sourceTree = "<group>"; };
-		0DECB7F51EB29243001A9334 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendingItemCell.swift; sourceTree = "<group>"; };
+		0DECB7F91EB2FF46001A9334 /* Opperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opperations.swift; sourceTree = "<group>"; };
+		0DECB7FB1EB30018001A9334 /* VendingInventory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VendingInventory.plist; path = ../../../../Downloads/VendingInventory.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +64,14 @@
 			children = (
 				0D36A23A1EB167C500AD5E54 /* AppDelegate.swift */,
 				0D36A23C1EB167C500AD5E54 /* ViewController.swift */,
+				0DECB7F91EB2FF46001A9334 /* Opperations.swift */,
 				0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */,
 				0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */,
 				0D36A23E1EB167C500AD5E54 /* Main.storyboard */,
-				0DECB7F51EB29243001A9334 /* CollectionViewController.swift */,
 				0D36A2411EB167C500AD5E54 /* Assets.xcassets */,
 				0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */,
 				0D36A2461EB167C500AD5E54 /* Info.plist */,
+				0DECB7FB1EB30018001A9334 /* VendingInventory.plist */,
 			);
 			path = "Vending Machines";
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D36A2451EB167C500AD5E54 /* LaunchScreen.storyboard in Resources */,
+				0DECB7FC1EB30018001A9334 /* VendingInventory.plist in Resources */,
 				0D36A2421EB167C500AD5E54 /* Assets.xcassets in Resources */,
 				0D36A2401EB167C500AD5E54 /* Main.storyboard in Resources */,
 			);
@@ -146,10 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DECB7F61EB29243001A9334 /* CollectionViewController.swift in Sources */,
 				0DECB7F81EB293B1001A9334 /* VendingItemCell.swift in Sources */,
 				0D36A23D1EB167C500AD5E54 /* ViewController.swift in Sources */,
 				0D36A23B1EB167C500AD5E54 /* AppDelegate.swift in Sources */,
+				0DECB7FA1EB2FF46001A9334 /* Opperations.swift in Sources */,
 				0D36A2511EB1989200AD5E54 /* AddFundsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
