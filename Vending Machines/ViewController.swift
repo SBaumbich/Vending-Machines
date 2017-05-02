@@ -11,13 +11,13 @@ import UIKit
 fileprivate let reuseIdentifier = "vendingItem"
 fileprivate let screenWidth = UIScreen.main.bounds.width
 
-
-
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var scrollingHeader: UILabel!
     @IBOutlet var collectionView: UICollectionView!
     var inventory: [String: VMItem] = [:]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +71,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? VendingItemCell else { fatalError()}
         // Configure the cell
-        item =
-        cell.iconView.image = item.icon()
-        
         return cell
     }
 }

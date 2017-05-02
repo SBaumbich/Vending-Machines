@@ -13,6 +13,7 @@
 		0D36A2421EB167C500AD5E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D36A2411EB167C500AD5E54 /* Assets.xcassets */; };
 		0D36A2451EB167C500AD5E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */; };
 		0D36A2511EB1989200AD5E54 /* AddFundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */; };
+		0D4B952E1EB7E7DF0087A89D /* VendingItemData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D4B952D1EB7E7DF0087A89D /* VendingItemData.json */; };
 		0DECB7F81EB293B1001A9334 /* VendingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */; };
 		0DECB7FA1EB2FF46001A9334 /* Opperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F91EB2FF46001A9334 /* Opperations.swift */; };
 		0DECB7FC1EB30018001A9334 /* VendingInventory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DECB7FB1EB30018001A9334 /* VendingInventory.plist */; };
@@ -27,6 +28,7 @@
 		0D36A2441EB167C500AD5E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D36A2461EB167C500AD5E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFundsViewController.swift; sourceTree = "<group>"; };
+		0D4B952D1EB7E7DF0087A89D /* VendingItemData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VendingItemData.json; path = ../../../../Downloads/VendingItemData.json; sourceTree = "<group>"; };
 		0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendingItemCell.swift; sourceTree = "<group>"; };
 		0DECB7F91EB2FF46001A9334 /* Opperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opperations.swift; sourceTree = "<group>"; };
 		0DECB7FB1EB30018001A9334 /* VendingInventory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VendingInventory.plist; path = ../../../../Downloads/VendingInventory.plist; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */,
 				0D36A2461EB167C500AD5E54 /* Info.plist */,
 				0DECB7FB1EB30018001A9334 /* VendingInventory.plist */,
+				0D4B952D1EB7E7DF0087A89D /* VendingItemData.json */,
 			);
 			path = "Vending Machines";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D36A2451EB167C500AD5E54 /* LaunchScreen.storyboard in Resources */,
+				0D4B952E1EB7E7DF0087A89D /* VendingItemData.json in Resources */,
 				0DECB7FC1EB30018001A9334 /* VendingInventory.plist in Resources */,
 				0D36A2421EB167C500AD5E54 /* Assets.xcassets in Resources */,
 				0D36A2401EB167C500AD5E54 /* Main.storyboard in Resources */,
