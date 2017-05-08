@@ -16,7 +16,6 @@
 		0D4B952E1EB7E7DF0087A89D /* VendingItemData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D4B952D1EB7E7DF0087A89D /* VendingItemData.json */; };
 		0DECB7F81EB293B1001A9334 /* VendingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */; };
 		0DECB7FA1EB2FF46001A9334 /* Opperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECB7F91EB2FF46001A9334 /* Opperations.swift */; };
-		0DECB7FC1EB30018001A9334 /* VendingInventory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DECB7FB1EB30018001A9334 /* VendingInventory.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		0D4B952D1EB7E7DF0087A89D /* VendingItemData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VendingItemData.json; path = ../../../../Downloads/VendingItemData.json; sourceTree = "<group>"; };
 		0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendingItemCell.swift; sourceTree = "<group>"; };
 		0DECB7F91EB2FF46001A9334 /* Opperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opperations.swift; sourceTree = "<group>"; };
-		0DECB7FB1EB30018001A9334 /* VendingInventory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VendingInventory.plist; path = ../../../../Downloads/VendingInventory.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +62,42 @@
 		0D36A2391EB167C500AD5E54 /* Vending Machines */ = {
 			isa = PBXGroup;
 			children = (
-				0D36A23A1EB167C500AD5E54 /* AppDelegate.swift */,
-				0D36A23C1EB167C500AD5E54 /* ViewController.swift */,
-				0DECB7F91EB2FF46001A9334 /* Opperations.swift */,
-				0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */,
-				0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */,
-				0D36A23E1EB167C500AD5E54 /* Main.storyboard */,
+				0D73C17D1EC0E713000FC44C /* Model */,
+				0D73C17E1EC0E71D000FC44C /* View */,
+				0D73C17F1EC0E721000FC44C /* Controller */,
 				0D36A2411EB167C500AD5E54 /* Assets.xcassets */,
-				0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */,
 				0D36A2461EB167C500AD5E54 /* Info.plist */,
-				0DECB7FB1EB30018001A9334 /* VendingInventory.plist */,
 				0D4B952D1EB7E7DF0087A89D /* VendingItemData.json */,
 			);
 			path = "Vending Machines";
+			sourceTree = "<group>";
+		};
+		0D73C17D1EC0E713000FC44C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D36A23A1EB167C500AD5E54 /* AppDelegate.swift */,
+				0DECB7F91EB2FF46001A9334 /* Opperations.swift */,
+				0DECB7F71EB293B1001A9334 /* VendingItemCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0D73C17E1EC0E71D000FC44C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D36A23E1EB167C500AD5E54 /* Main.storyboard */,
+				0D36A2431EB167C500AD5E54 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0D73C17F1EC0E721000FC44C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0D36A23C1EB167C500AD5E54 /* ViewController.swift */,
+				0D36A2501EB1989200AD5E54 /* AddFundsViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +162,6 @@
 			files = (
 				0D36A2451EB167C500AD5E54 /* LaunchScreen.storyboard in Resources */,
 				0D4B952E1EB7E7DF0087A89D /* VendingItemData.json in Resources */,
-				0DECB7FC1EB30018001A9334 /* VendingInventory.plist in Resources */,
 				0D36A2421EB167C500AD5E54 /* Assets.xcassets in Resources */,
 				0D36A2401EB167C500AD5E54 /* Main.storyboard in Resources */,
 			);

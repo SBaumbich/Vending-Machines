@@ -10,29 +10,33 @@
 import Foundation
 import UIKit
 
+// Vending Machine Item Struct
 struct VMItem {
     var name: String
     var price: Double
     var quantity: Int
-    var servingSize: String?
-    var amountPerServing : String?
-    var calories: Int?
-    var totalFat : (String, Int)?
-    var saturatedFat : (String, Int)?
-    var transFat : (String, String)?
-    var sodium : (String, Int)?
-    var carbs : (String, Int)?
-    var dietaryFiber : (String, Int)?
-    var sugars: (String, String)?
-    var protein: (String, String)?
-    var image: UIImage?
+    var servingSize: String? = nil
+    var amountPerServing : String? = nil
+    var calories: Int? = nil
+    var totalFat : (String, Int)? = nil
+    var saturatedFat : (String, Int)? = nil
+    var transFat : (String, String)? = nil
+    var sodium : (String, Int)? = nil
+    var carbs : (String, Int)? = nil
+    var dietaryFiber : (String, Int)? = nil
+    var sugars: (String, String)? = nil
+    var protein: (String, String)? = nil
+    var image: UIImage? = #imageLiteral(resourceName: "Default")
 }
 
+//Error Type Enum
 enum ParsingError: Error {
     case missing(String)
     case invalid(String, Any)
 }
 
+
+//Converts JSON data into an array of dictionary's
 class JSONConverter {
     static func ConverterJSON() -> [[String: AnyObject]] {
         
@@ -50,10 +54,12 @@ class JSONConverter {
 }
 
 
+// Creates an array of VMItems
 class InventoryUnarchiver {
     static func vendingInventory(fromArray array: [[String: AnyObject]]) throws -> [VMItem] {
         
         var inventory : [VMItem] = []
+        
         for item in array {
             guard let vmDict = item["item"] as? [String: Any]else {
                 throw ParsingError.invalid("Dict", false)
@@ -104,21 +110,16 @@ class InventoryUnarchiver {
                 throw ParsingError.missing("Missing item total sugar")
             }
             var image = #imageLiteral(resourceName: "Default")
-        
             if let itemImage = UIImage(named: name) {
                 image = itemImage
             } else {
                 print("image error")
             }
             
-            
             let newItem = VMItem(name: name, price: price, quantity: quantity, servingSize: servingSize, amountPerServing: amountPerServing, calories: calories, totalFat: totalFat, saturatedFat: totalSaturatedFat, transFat: totalTransFat, sodium: totalSodium, carbs: totalCarbs, dietaryFiber: totalDietaryFiber, sugars: totalSugars, protein: totalProtein, image: image)
             
             inventory.append(newItem)
-            
         }
-    
-        
         return inventory
     }
 }
