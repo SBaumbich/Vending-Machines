@@ -22,6 +22,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
+        // Create item inventory
         let itemInventory = JSONConverter.ConverterJSON()
         do {
             inventory = try InventoryUnarchiver.vendingInventory(fromArray: itemInventory)
@@ -35,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         //Scroll label
         UIView.animate(withDuration: 8.0, delay:0, options: [.repeat], animations: {
-            self.scrollingHeader.frame = CGRect(self.scrollingHeader.frame.origin.x - 650, self.scrollingHeader.frame.origin.y - 0, self.scrollingHeader.frame.size.width, self.scrollingHeader.frame.size.height)
+            self.scrollingHeader.frame = CGRect(self.scrollingHeader.frame.origin.x - 1000, self.scrollingHeader.frame.origin.y - 0, self.scrollingHeader.frame.size.width, self.scrollingHeader.frame.size.height)
         }, completion: nil)
         
     }

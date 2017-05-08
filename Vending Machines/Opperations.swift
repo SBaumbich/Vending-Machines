@@ -103,7 +103,7 @@ class InventoryUnarchiver {
             guard let totalProteinDict = nutritionFacts["protein"] as? [String : Any], let totalProtein = (totalProteinDict["unit amount"], totalProteinDict["% daily value"]) as? (String, String) else {
                 throw ParsingError.missing("Missing item total sugar")
             }
-            var image = #imageLiteral(resourceName: "default")
+            var image = #imageLiteral(resourceName: "Default")
         
             if let itemImage = UIImage(named: name) {
                 image = itemImage
