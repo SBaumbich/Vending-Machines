@@ -15,16 +15,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet var scrollingHeader: UILabel!
     @IBOutlet var collectionView: UICollectionView!
-    var inventory: [String: VMItem] = [:]
+    var inventory: [VMItem] = []
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let pListDict = PlistConverter.dictionary(fromFile: "VendingInventory", ofType: "plist")
-        let itemInventory = InventoryUnarchiver.vendingInventory(fromDictionary: pListDict)
-        inventory = itemInventory
+        let itemInventory = JSONConverter.ConverterJSON()
+        do {
+            inventory = try InventoryUnarchiver.vendingInventory(fromArray: itemInventory)
+            print(inventory[0])
+        } catch {
+            print(error)
+        }
         
         // Configure Collection View
         setupCollectionViewCells()
@@ -71,6 +75,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? VendingItemCell else { fatalError()}
         // Configure the cell
+        
+        let item = inventory[indexPath.row]
+        cell.icon.image = item.image
+        cell.name.text = item.name
+        cell.price.text = ("\(item.price)")
         return cell
     }
 }
