@@ -78,8 +78,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let item = inventory[indexPath.row]
         cell.icon.image = item.image
-        cell.name.text = item.name
-        cell.price.text = ("\(item.price)")
+        cell.name.text = item.name.uppercased()
+        cell.price.text = ("$\(item.price)")
         return cell
     }
 }
